@@ -1,0 +1,66 @@
+.nosotros-container {
+  background-color: #f9f9f9; /* Fondo claro */
+  padding: 40px; /* Espaciado interno */
+  margin: 20px auto; /* Centrar y margen superior/inferior */
+  max-width: 800px; /* Ancho máximo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  text-align: center; /* Centrado de texto */
+}
+
+.nosotros-container h1 {
+  color: #2c3e50; /* Color del título */
+  font-size: 2.5em; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Espacio debajo */
+}
+
+.nosotros-container h2 {
+  color: #34495e; /* Color de subtítulos */
+  font-size: 1.8em; /* Tamaño de fuente */
+  margin-top: 30px; /* Espacio encima */
+  margin-bottom: 10px; /* Espacio debajo */
+}
+
+.nosotros-container p {
+  color: #666; /* Color de texto */
+  font-size: 1.1em; /* Tamaño de fuente */
+  line-height: 1.6; /* Altura de línea */
+  margin-bottom: 20px; /* Espacio debajo */
+}
+
+.nosotros-container ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  color: #666;
+  font-size: 1.1em;
+}
+
+.nosotros-container li {
+  margin: 10px 0; /* Espacio entre elementos de la lista */
+  position: relative; /* Relativo para el icono */
+  padding-left: 25px; /* Espacio para el icono */
+}
+
+.nosotros-container li::before {
+  content: '✓'; /* Símbolo de check */
+  color: #27ae60; /* Color del icono */
+  position: absolute; /* Posicionamiento absoluto */
+  left: 0; /* Alineado a la izquierda */
+  font-size: 1.2em; /* Tamaño de icono */
+}
+
+.nosotros-container h1, .nosotros-container h2, .nosotros-container p, .nosotros-container ul {
+  animation: fadeIn 1s ease-in; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opacidad inicial */
+    transform: translateY(10px); /* Movimiento inicial */
+  }
+  to {
+    opacity: 1; /* Opacidad final */
+    transform: translateY(0); /* Posición final */
+  }
+}

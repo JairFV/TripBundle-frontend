@@ -1,0 +1,20 @@
+nav {
+  background-color: #333; /* Color de fondo de la barra de navegación */
+  padding: 10px; /* Espaciado interno */
+}
+
+nav a {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 15px; /* Espaciado interno para los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+}
+
+nav a:hover {
+  background-color: #575757; /* Color de fondo al pasar el ratón */
+}
+
+nav a.active {
+  background-color: #555; /* Color de fondo para el enlace activo */
+}
