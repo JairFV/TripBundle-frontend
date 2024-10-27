@@ -40,8 +40,8 @@ export class ListaUsuarioComponent {
   displayedColumns: string[] = ['id', 'dni', 'nombre', 'apellido', 'telefono','email', 'password','fechaNacimiento'];
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource<Usuario>();
 
-  @ViewChild(MatPaginator) paginator: MatPaginator ;
-  @ViewChild(MatSort) sort: MatSort;
+  //@ViewChild(MatPaginator) paginator: MatPaginator ;
+  //@ViewChild(MatSort) sort: MatSort;
 
 
   usuarioService : UsuarioService = inject(UsuarioService);
@@ -51,10 +51,10 @@ export class ListaUsuarioComponent {
     console.log("Load Constructor")
   }
 
-  ngAfterViewInit(): void {
+  /*ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
-  }
+  }*/
 
   ngOnInit():void {
     console.log("Load OnInit Lista")

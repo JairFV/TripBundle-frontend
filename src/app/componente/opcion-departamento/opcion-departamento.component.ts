@@ -2,19 +2,17 @@ import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-inicio-sesion',
+  selector: 'app-opcion-departamento',
   standalone: true,
   imports: [],
-  templateUrl: './inicio-sesion.component.html',
-  styleUrl: './inicio-sesion.component.css'
+  templateUrl: './opcion-departamento.component.html',
+  styleUrl: './opcion-departamento.component.css'
 })
-export class InicioSesionComponent {
+export class OpcionDepartamentoComponent {
   constructor(private route: Router) {
   }
 
-
-
-  opcionDepartamento(url: string): void{
+  detalleDepartamento(url: string): void{
     console.log('url');
     this.route.navigate([url]);
   }

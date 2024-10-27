@@ -4,6 +4,8 @@ import {InicioSesionComponent} from './componente/inicio-sesion/inicio-sesion.co
 import {ListaUsuarioComponent} from './componente/lista-usuario/lista-usuario.component';
 import {RegistrarseComponent} from './componente/registrarse/registrarse.component';
 import {AcercaComponent} from './componente/acerca/acerca.component';
+import {DetalleDepartamentoComponent} from './componente/detalle-departamento/detalle-departamento.component';
+import {OpcionDepartamentoComponent} from './componente/opcion-departamento/opcion-departamento.component';
 
 export const routes: Routes = [
 
@@ -14,7 +16,7 @@ export const routes: Routes = [
   {path: 'usuario', component: ListaUsuarioComponent},
   {path: 'registrarse', component: RegistrarseComponent},
 
-
-
+  {path: 'detalle-departamento', component: DetalleDepartamentoComponent},
+  {path: 'opcion-departamento', component: OpcionDepartamentoComponent},
 
 ];

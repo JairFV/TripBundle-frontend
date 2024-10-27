@@ -1,5 +1,5 @@
 .tripbundle-section {
-  background-color: #f0f8ff; /* Color de fondo suave */
+  background-color: #fdf6ed; /* Color de fondo suave */
   padding: 40px; /* Espaciado interno */
   margin: 20px 0; /* Espaciado externo */
   border-radius: 10px; /* Bordes redondeados */
@@ -64,4 +64,11 @@
 
 .tripbundle-section li {
   margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.imagesLogo img {
+  margin: 0% 10px 0% 0%;
+  width: 90%;
+  height: 100%;
+  border-radius: 50px 15%;
 }
