@@ -4,25 +4,19 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 35em;
+  padding-right: 35em;
   padding-bottom: 0.4em;
-  background-color: #171717;
-  border-radius: 25px;
+  background-color: #f0e4d6;
+  border-radius: 15px;
   transition: .4s ease-in-out;
-}
-
-
-.form:hover {
-  transform: scale(1.05);
-  border: 1px solid black;
 }
 
 #heading {
   text-align: center;
   margin: 2em;
-  color: rgb(255, 255, 255);
-  font-size: 1.2em;
+  color: black;
+  font-size: 2.2em;
 }
 
 .field {
@@ -34,15 +28,15 @@
   padding: 0.6em;
   border: none;
   outline: none;
-  color: white;
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #000000;
+  background-color: #ccbaa5;
+  box-color: #000000;
 }
 
 .input-icon {
   height: 1.3em;
   width: 1.3em;
-  fill: white;
+  fill: #000000;
 }
 
 .input-field {
@@ -69,8 +63,8 @@
   border: none;
   outline: none;
   transition: .4s ease-in-out;
-  background-color: #252525;
-  color: white;
+  background-color: #ccbaa5;
+  color: #000000;
 }
 
 .button1:hover {
@@ -86,8 +80,8 @@
   border: none;
   outline: none;
   transition: .4s ease-in-out;
-  background-color: #252525;
-  color: white;
+  background-color: #ccbaa5;
+  color: #000000;
 }
 
 .button2:hover {
@@ -98,12 +92,13 @@
 .button3 {
   margin-bottom: 3em;
   padding: 0.5em;
+
   border-radius: 5px;
   border: none;
   outline: none;
   transition: .4s ease-in-out;
-  background-color: #252525;
-  color: white;
+  background-color: #ccbaa5;
+  color: #000000;
 }
 
 .button3:hover {

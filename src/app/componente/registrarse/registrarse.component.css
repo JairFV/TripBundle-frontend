@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh; /* Altura completa de la pantalla */
   margin: 0;
-  background-color: #0d0d0d; /* Fondo oscuro para mayor contraste */
+  background-color: #ccbaa5; /* Fondo oscuro para mayor contraste */
 }
 
 /* Estilos del formulario */
@@ -17,8 +17,8 @@ body {
   padding: 20px;
   border-radius: 20px;
   position: relative;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #f0e4d6;
+  color: #000000;
   border: 1px solid #333;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para destacar */
 }
@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 30px;
-  color: #00bfff;
+  color: #000000;
 }
 
 .title::before,
@@ -42,7 +42,7 @@ body {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #00bfff;
+  background-color: #000000;
 }
 
 .title::after {
@@ -52,7 +52,7 @@ body {
 .message,
 .signin {
   font-size: 14.5px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000000;
 }
 
 .signin {
@@ -64,7 +64,7 @@ body {
 }
 
 .signin a {
-  color: #00bfff;
+  color: #000000;
 }
 
 .flex {
@@ -79,7 +79,7 @@ body {
 
 .form label .input {
   background-color: #333;
-  color: #fff;
+  color: #000000;
   width: 100%;
   padding: 20px 5px 5px 10px;
   outline: 0;
@@ -88,7 +88,7 @@ body {
 }
 
 .form label .input + span {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   position: absolute;
   left: 10px;
   top: 0px;
@@ -104,7 +104,7 @@ body {
 
 .form label .input:focus + span,
 .form label .input:valid + span {
-  color: #00bfff;
+  color: #000000;
   top: 0px;
   font-size: 0.7em;
   font-weight: 600;
@@ -119,14 +119,15 @@ body {
   outline: none;
   padding: 10px;
   border-radius: 10px;
-  color: #fff;
+  color: #000000;
   font-size: 16px;
   transform: .3s ease;
-  background-color: #00bfff;
+  background-color: #ccbaa5;
 }
 
 .submit:hover {
-  background-color: #00bfff96;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 @keyframes pulse {
