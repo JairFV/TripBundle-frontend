@@ -1,10 +1,57 @@
 
-<nav>
-  <a [routerLink]="'/'">Home</a> |
-  <a [routerLink]="'acerca'">Acerca</a> |
-  <a [routerLink]="'inicio-sesion'">Iniciar Sesion</a>
-  <a [routerLink]="'usuario'">Usuario</a>|
-  <a [routerLink]="'registrarse'">Registrarse</a>
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="TripBundle Logo" width="100" height="auto" class="logo">
+
+  </div>
+  <div class="nav-links">
+    <a [routerLink]="'/'">Home</a>
+    <a [routerLink]="'acerca'">Acerca</a>
+    <a [routerLink]="'inicio-sesion'">Iniciar Sesión</a>
+    <a [routerLink]="'usuario'">Usuario</a>
+    <a [routerLink]="'registrarse'">Registrarse</a>
+
+  </div>
+  <!-- Menú desplegable -->
+  <div class="dropdown">
+    <a href="#" class="dropdown-toggle">Más opciones</a>
+    <div class="dropdown-menu">
+      <a [routerLink]="'detalle-departamento'">Detalle Departamento</a>
+      <a [routerLink]="'opcion-departamento'">Opción Departamento</a>
+      <a [routerLink]="'detalle-flora'">Detalle Flora</a>
+      <a [routerLink]="'detalle-fauna'">Detalle Fauna</a>
+      <a [routerLink]="'detalle-comida'">Detalle Comida</a>
+      <a [routerLink]="'detalle-atractivo'">Detalle Atractivo</a>
+    </div>
+  </div>
 
 </nav>
-<router-outlet />
+
+
+
+  <!-- Footer -->
+  <footer class="footer" [class.visible]="footerVisible">
+    <div class="footer-container">
+
+
+      <!-- Enlaces de navegación del footer -->
+      <div class="footer-links" [class.visible]="footerVisible">
+        <a [routerLink]="'/'">Inicio</a>
+        <a [routerLink]="'acerca'">Acerca de TripBundle</a>
+        <a [routerLink]="'contacto'">Contacto</a>
+        <a [routerLink]="'politica-privacidad'">Política de Privacidad</a>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="footer-contact">
+                <p>Teléfono: +51 123 456 789</p>
+        <p>Dirección: Lima, Perú</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+<router-outlet></router-outlet>
+

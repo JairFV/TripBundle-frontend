@@ -1,22 +1,186 @@
-nav {
-  background-color: #bfd1e0; /* Color de fondo de la barra de navegación */
-  text-color: black;
-  padding: 10px; /* Espaciado interno */
+/* Estilo general para la barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #BFD1E0;
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
-nav a {
-  color: black; /* Color del texto de los enlaces */
+/* Contenedor del logo */
+.logo-container {
+  position: absolute; /* Posición absoluta para que esté en la esquina superior izquierda */
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  animation: logoAnimation 1.5s ease-in-out infinite alternate;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Animación para el logo */
+@keyframes logoAnimation {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+  transform: translateY(-3px);
+}
+
+/* Efecto de animación de desvanecimiento para los enlaces */
+@keyframes linkFadeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.nav-links a:nth-child(1) { animation: linkFadeIn 0.3s ease forwards; }
+.nav-links a:nth-child(2) { animation: linkFadeIn 0.4s ease forwards; }
+.nav-links a:nth-child(3) { animation: linkFadeIn 0.5s ease forwards; }
+.nav-links a:nth-child(4) { animation: linkFadeIn 0.6s ease forwards; }
+.nav-links a:nth-child(5) { animation: linkFadeIn 0.7s ease forwards; }
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Estilos del menú desplegable */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+  color: #ffa500;
+}
+
+/* Mostrar menú en hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Sección principal */
+section {
+  position: relative; /* Contenedor relativo para el contenido */
+  min-height: 100vh; /* Ajusta la altura mínima al 100% de la viewport */
+  padding-bottom: 1000px; /* Espacio para que el footer no tape el contenido */
+}
+
+/* Footer */
+.footer {
+  position: fixed; /* Mantener el footer en la parte inferior de la ventana */
+  left: 0;
+  bottom: 0;
+  width: 100%; /*
+  height: 100px;
+  background-color: #BFD1E0; /* Color de fondo del footer */
+  color: #000000; /* Color del texto */
+  padding: 15px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  font-size: 10px; /* Tamaño de la fuente */
+  z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
+  transition: transform 1s ease; /* Suavizar la aparición */
+  transform: translateY(100%); /* Ocultar el footer inicialmente */
+}
+
+/* Clase para mostrar el footer */
+.footer.visible {
+  transform: translateY(0); /* Mostrar el footer al desplazar */
+}
+
+/* Contenedor del footer */
+.footer-container {
+  max-width: 1200px; /* Ajusta el ancho máximo según tu diseño */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Enlaces del footer */
+.footer-links {
+  display: flex; /* Cambiado a flex para alinear horizontalmente */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px; /* Espacio entre los enlaces */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.5s ease; /* Suavizar la aparición */
+}
+
+.footer-links.visible {
+  opacity: 1; /* Hacer visibles los enlaces cuando se añade la clase */
+}
+
+.footer-links a {
+  color: #ffffff; /* Color del texto de los enlaces */
   text-decoration: none; /* Sin subrayado */
-  padding: 10px 15px; /* Espaciado interno para los enlaces */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s; /* Transición suave al pasar el ratón */
+  font-weight: bold; /* Texto en negrita */
+  padding: 5px 10px; /* Espaciado interno */
+  transition: color 0.3s, transform 0.3s; /* Transición suave */
 }
 
-nav a:hover {
-  background-color: #6d96a6; /* Color de fondo al pasar el ratón */
-
+.footer-links a:hover {
+  color: #ffa500; /* Cambiar color al pasar el ratón */
+  transform: translateY(-3px); /* Efecto de elevación */
 }
 
-nav a.active {
-  background-color: #555; /* Color de fondo para el enlace activo */
+/* Información de contacto */
+.footer-contact {
+  margin-top: 10px; /* Margen superior para separar del contenido */
 }
