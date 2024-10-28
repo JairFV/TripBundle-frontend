@@ -1,124 +1,112 @@
-/* Estilo general para la barra de navegación */
+/* Estilos Generales */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra los elementos horizontalmente */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8%;
-  background-color: #BFD1E0;
+  justify-content: space-between;
+  background-color:#BFD1E0; /* Color de fondo de la barra de navegación */
   padding: 10px 20px;
-  z-index: 1000;
+  font-weight: bold; /* Para negrita */
+  font-size: 18px;
 }
 
-/* Contenedor del logo */
-.logo-container {
-  position: absolute; /* Posición absoluta para que esté en la esquina superior izquierda */
-  top: 10px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  animation: logoAnimation 1.5s ease-in-out infinite alternate;
-}
+/* Estilo del Logo */
 .logo {
-  width: 50px;
-  height: auto;
+  height: 40px; /* Ajusta la altura del logo según sea necesario */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3)); /* Sombra para darle profundidad */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones para suavizar cambios */
 }
 
-/* Animación para el logo */
-@keyframes logoAnimation {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+/* Efecto de zoom cuando el usuario pasa el ratón */
+.logo:hover {
+  transform: scale(1.1); /* Agranda el logo ligeramente */
+  filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.4)); /* Aumenta la sombra al hacer hover */
 }
 
-/* Estilo para los enlaces de navegación */
+/* Efecto de rotación al hacer clic */
+.logo:active {
+  transform: scale(0.95) rotate(5deg); /* Rota y reduce ligeramente el tamaño al hacer clic */
+}
+
+
+/* Estilos para el menú de navegación */
 .nav-links {
-  display: flex;
+  display: flex; /* Mostrar los enlaces de navegación en fila */
+  gap: 20px; /* Espacio entre los enlaces */
+  margin-left: auto; /* Esto empuja los enlaces hacia la derecha */
+}
+
+/* Estilo del enlace "Más opciones" */
+.dropdown {
+  position: relative; /* Necesario para el posicionamiento del menú desplegable */
   gap: 15px;
 }
 
-.nav-links a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffa500;
-  transform: translateY(-3px);
-}
-
-/* Efecto de animación de desvanecimiento para los enlaces */
-@keyframes linkFadeIn {
-  from { opacity: 0; transform: translateX(-10px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.nav-links a:nth-child(1) { animation: linkFadeIn 0.3s ease forwards; }
-.nav-links a:nth-child(2) { animation: linkFadeIn 0.4s ease forwards; }
-.nav-links a:nth-child(3) { animation: linkFadeIn 0.5s ease forwards; }
-.nav-links a:nth-child(4) { animation: linkFadeIn 0.6s ease forwards; }
-.nav-links a:nth-child(5) { animation: linkFadeIn 0.7s ease forwards; }
-
-/* Responsivo para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* Estilos del menú desplegable */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-toggle {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
+/* Estilo del menú desplegable */
 .dropdown-menu {
-  display: none;
-  position: absolute;
+  position: absolute; /* Posicionar el menú desplegable */
   top: 100%;
   left: 0;
-  background-color: #444;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  right: 0;
+  gap: 10px;
+  display: none; /* Ocultar el menú desplegable por defecto */
+  background-color: #BFD1E0; /* Color de fondo del menú desplegable */
+  z-index: 1; /* Asegurar que el menú esté por encima de otros elementos */
 }
-
-.dropdown-menu a {
-  display: block;
-  color: #fff;
-  padding: 5px 10px;
-  text-decoration: none;
-  white-space: nowrap;
+.nav-links a:hover {
+  color: #ffa500; /* Cambiar color al pasar el ratón */
+  transform: translateY(-3px); /* Efecto de elevación */
 }
+.dropdown a:hover{
+  color: #ffa500; /* Cambiar color al pasar el ratón */
 
-.dropdown-menu a:hover {
-  background-color: #555;
-  color: #ffa500;
 }
-
-/* Mostrar menú en hover */
+/* Mostrar el menú desplegable al pasar el ratón */
 .dropdown:hover .dropdown-menu {
-  display: block;
+  display: block;  /* Mostrar el menú desplegable cuando el mouse está sobre el contenedor */
+ }
+
+/* Estilo Adicional para los Enlaces */
+.nav-links a,
+.dropdown-menu a {
+  color: cornflowerblue; /* Color de los enlaces */
+  padding: 5px; /* Espaciado para los enlaces */
+  text-decoration: none; /* Eliminar subrayado de los enlaces */
 }
 
+/* Estilo del botón de menú en móviles */
+.menu-toggle {
+  display: none; /* Ocultar el botón de menú en escritorio */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Ocultar los enlaces de navegación en móviles por defecto */
+    flex-direction: column; /* Mostrar enlaces en columna al abrir el menú */
+    position: absolute; /* Posicionar el menú en relación a la barra de navegación */
+    background-color:black; /* Fondo igual al de la barra de navegación */
+    width: 100%; /* Ancho completo */
+    z-index: 1; /* Para asegurarse de que el menú esté por encima de otros elementos */
+
+  }
+
+  .nav-links.show {
+    display: flex; /* Mostrar enlaces cuando el menú está abierto */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el botón de menú en móviles */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 60px;
+  }
+}
+
+
+/* CSS HECHO PARA EL FOOTER*/
 /* Sección principal */
 section {
   position: relative; /* Contenedor relativo para el contenido */
@@ -131,8 +119,8 @@ section {
   position: fixed; /* Mantener el footer en la parte inferior de la ventana */
   left: 0;
   bottom: 0;
-  width: 100%; /*
-  height: 100px;
+  width: 100%;
+  height: 100px; /* Altura del footer */
   background-color: #BFD1E0; /* Color de fondo del footer */
   color: #000000; /* Color del texto */
   padding: 15px; /* Espaciado interno */
@@ -184,3 +172,4 @@ section {
 .footer-contact {
   margin-top: 10px; /* Margen superior para separar del contenido */
 }
+
