@@ -10,6 +10,7 @@ import {DetalleFloraComponent} from './componente/detalle-flora/detalle-flora.co
 import {DetalleFaunaComponent} from './componente/detalle-fauna/detalle-fauna.component';
 import {DetalleComidaComponent} from './componente/detalle-comida/detalle-comida.component';
 import {DetalleAtractivoComponent} from './componente/detalle-atractivo/detalle-atractivo.component';
+import {TipoPaqueteComponent} from './componente/tipo-paquete/tipo-paquete.component';
 
 export const routes: Routes = [
 
@@ -26,4 +27,5 @@ export const routes: Routes = [
   {path: 'detalle-fauna', component: DetalleFaunaComponent},
   {path: 'detalle-comida', component: DetalleComidaComponent},
   {path: 'detalle-atractivo', component: DetalleAtractivoComponent},
+  {path: 'tipo-paquete', component: TipoPaqueteComponent}
 ];

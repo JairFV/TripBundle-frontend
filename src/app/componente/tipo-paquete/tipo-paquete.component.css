@@ -1,0 +1,10 @@
+.imagen-con-boton {
+  position: relative; /* Contenedor de posicionamiento */
+}
+
+.boton-encima {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 20px; /* Desplazamiento vertical desde el borde superior */
+  left: 50%; /* Posición horizontal: centro */
+  transform: translate(-50%, 0); /* Centrar horizontalmente */
+}

@@ -68,7 +68,7 @@
 /* Estilo Adicional para los Enlaces */
 .nav-links a,
 .dropdown-menu a {
-  color: cornflowerblue; /* Color de los enlaces */
+  color: black; /* Color de los enlaces */
   padding: 5px; /* Espaciado para los enlaces */
   text-decoration: none; /* Eliminar subrayado de los enlaces */
 }
