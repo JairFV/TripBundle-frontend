@@ -1,5 +1,55 @@
-
-<div class="imagen-con-boton">
-  <img src="https://i.blogs.es/0ca9a6/aa/1366_2000.webp" alt="Descripción de la imagen">
-  <button class="boton-encima">Seleccionar paquete</button>
+<body>
+<div class="title-cards">
+  <h2>Tipos de paquetes turísticos</h2>
 </div>
+<div class="container-card">
+  <div class="card">
+    <figure>
+      <img
+        src="/images/economico.jpg"
+      />
+    </figure>
+    <div class="contenido-card">
+      <h3>Economico</h3>
+      <p>
+        Hostales y Albergues: Alojamientos compartidos o privados a bajo costo.
+        Tours grupales: Ofrecen tarifas reducidas al viajar en grupo.
+        Transporte público: Uso de autobuses y trenes para ahorrar en traslados.
+      </p>
+      <a (click)="registroReserva('registro-reserva')">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img
+        src="/images/arequipa.jpg"
+      />
+    </figure>
+    <div class="contenido-card">
+      <h3>Medio</h3>
+      <p>
+        Hoteles de gama media: Alojamientos cómodos pero asequibles.
+        Paquetes de excursiones: Incluyen actividades y visitas guiadas a precios razonables.
+        Comidas en restaurantes locales: Probar la gastronomía sin gastar demasiado.
+      </p>
+      <a (click)="registroReserva('registro-reserva')">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img
+        src="/images/ica.jpg"
+      />
+    </figure>
+    <div class="contenido-card">
+      <h3>Lujoso</h3>
+      <p>
+        Hoteles boutique o de lujo: Alojamientos con servicios adicionales y mejor ubicación.
+        Tours personalizados: Experiencias privadas y exclusivas.
+        Transporte privado: Vehículos con conductor para mayor comodidad.
+      </p>
+      <a (click)="registroReserva('registro-reserva')">Ver más</a>
+    </div>
+  </div>
+</div>
+</body>
