@@ -1,87 +1,194 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  color: #333;
+  background-color: #f4f5f7;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
 }
 
-/* Contenedor principal */
 .acerca-de-container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff; /* Fondo blanco para el contenedor */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Secciones */
-section {
-  margin: 20px 0; /* Margen entre secciones */
-}
-
-h1, h2, p, ul{
-  color: #333;
   text-align: center;
-  /* Color de los títulos */
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Sección de Valores */
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título principal */
+.acerca-de-container h1 {
+  font-size: 2.5rem;
+  color: #4A90E2;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Estilos de tarjeta compartida */
+.card-vision, .card-mision {
+  float: left; /* Hace que las tarjetas floten hacia la izquierda */
+  width: 45%; /* Ajusta el ancho de cada tarjeta */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-right: 10px; /* Espacio entre las tarjetas */
+
+}
+.card-vision {
+  margin-right: 20px; /* Elimina el margen derecho de la segunda tarjeta */
+}
+.card-vision:hover, .card-mision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-vision h4, .card-mision h4 {
+  color: #2B50AA;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card-vision p, .card-mision p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Contenedor de misión y visión */
+.mision-vision-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+/* Sección de valores */
+.valores {
+  width: 45%; /* Ajusta el ancho de cada tarjeta */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 90px auto; /* Centra el div y agrega margen superior */
+  transform: translateY(30px); /* Mueve el div un poco hacia abajo */
+}
+
+.valores h2 {
+  font-size: 2rem;
+  color: #1A73E8;
+  margin-bottom: 15px;
+}
+
 .valores ul {
-  list-style-type: none; /* Elimina puntos de lista */
+  list-style: none;
   padding: 0;
 }
 
 .valores li {
-  padding: 5px 0; /* Espaciado entre valores */
+  font-size: 1.2rem;
+  color: #555;
+  padding: 10px;
+  transition: transform 0.3s, color 0.3s;
+  border: 1px solid #ccc; /* Borde para cada elemento de la lista */
+  border-radius: 4px; /* Redondea los bordes */
+  margin-bottom: 8px; /* Espacio entre elementos */
 }
 
-/* Estilos de la sección de Creadores */
+.valores li:hover {
+  transform: scale(1.05);
+  color: #1A73E8;
+}
+
+
+/* Sección de Creadores */
 .creadores-container {
-  background-color: #e7f3fe; /* Fondo azul claro */
-  padding: 20px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-top: 30px; /* Separación del contenido anterior */
+  margin-top: 40px;
+}
+
+.creadores-container h2 {
+  font-size: 2rem;
+  color: #4A90E2;
+  margin-bottom: 30px;
 }
 
 .creator-cards {
   display: flex;
-  justify-content: space-between; /* Distribución uniforme de las tarjetas */
-  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.card {
-  background-color: white; /* Fondo blanco para las tarjetas */
-  border: 1px solid #ddd; /* Borde gris claro */
-  border-radius: 8px; /* Bordes redondeados para las tarjetas */
-  padding: 15px;
-  margin: 10px;
-  text-align: center; /* Centrar el texto dentro de la tarjeta */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
-  width: calc(25% - 20px); /* Ancho de las tarjetas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+/* Tarjetas de creadores */
+.creator-cards .card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+.creator-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.card img {
-  border-radius: 50%; /* Imagen circular */
-  margin-bottom: 10px; /* Espaciado entre la imagen y el texto */
+.creator-cards .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-h4 {
-  margin: 10px 0; /* Espaciado entre el título y el párrafo */
-  font-size: 1.2em; /* Aumentar tamaño de fuente del título */
-  color: #007BFF; /* Color azul para los nombres */
+.creator-cards .card img:hover {
+  transform: scale(1.1);
 }
 
-p {
-  font-size: 0.9em; /* Tamaño de fuente más pequeño para las descripciones */
-  color: #555; /* Color gris para las descripciones */
+.creator-cards .card h4 {
+  font-size: 1.5rem;
+  color: #2B50AA;
+  margin-top: 15px;
+}
+
+.creator-cards .card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mision-vision-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-vision, .card-mision {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .creator-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }

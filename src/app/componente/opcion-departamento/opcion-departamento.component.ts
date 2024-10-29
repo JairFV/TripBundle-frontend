@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-opcion-departamento',
   standalone: true,
-  imports: [],
+    imports: [
+        NgOptimizedImage
+    ],
   templateUrl: './opcion-departamento.component.html',
   styleUrl: './opcion-departamento.component.css'
 })

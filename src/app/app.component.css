@@ -1,175 +1,174 @@
-/* Estilos Generales */
+/* Estilos generales para el Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:#BFD1E0; /* Color de fondo de la barra de navegación */
+  background-color: #333;
   padding: 10px 20px;
-  font-weight: bold; /* Para negrita */
-  font-size: 18px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-/* Estilo del Logo */
-.logo {
-  height: 40px; /* Ajusta la altura del logo según sea necesario */
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3)); /* Sombra para darle profundidad */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones para suavizar cambios */
+.logo-container .logo {
+  width: 40px;
+  height: auto;
 }
 
-/* Efecto de zoom cuando el usuario pasa el ratón */
-.logo:hover {
-  transform: scale(1.1); /* Agranda el logo ligeramente */
-  filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.4)); /* Aumenta la sombra al hacer hover */
-}
-
-/* Efecto de rotación al hacer clic */
-.logo:active {
-  transform: scale(0.95) rotate(5deg); /* Rota y reduce ligeramente el tamaño al hacer clic */
-}
-
-
-/* Estilos para el menú de navegación */
 .nav-links {
-  display: flex; /* Mostrar los enlaces de navegación en fila */
-  gap: 20px; /* Espacio entre los enlaces */
-  margin-left: auto; /* Esto empuja los enlaces hacia la derecha */
-}
-
-/* Estilo del enlace "Más opciones" */
-.dropdown {
-  position: relative; /* Necesario para el posicionamiento del menú desplegable */
+  display: flex;
   gap: 15px;
 }
 
-/* Estilo del menú desplegable */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #1A73E8;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .dropdown-menu {
-  position: absolute; /* Posicionar el menú desplegable */
+  display: none;
+  position: absolute;
   top: 100%;
   left: 0;
-  right: 0;
-  gap: 10px;
-  display: none; /* Ocultar el menú desplegable por defecto */
-  background-color: #BFD1E0; /* Color de fondo del menú desplegable */
-  z-index: 1; /* Asegurar que el menú esté por encima de otros elementos */
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
 }
-.nav-links a:hover {
-  color: #ffa500; /* Cambiar color al pasar el ratón */
-  transform: translateY(-3px); /* Efecto de elevación */
-}
-.dropdown a:hover{
-  color: #ffa500; /* Cambiar color al pasar el ratón */
 
+.dropdown-menu.show {
+  display: block;
 }
-/* Mostrar el menú desplegable al pasar el ratón */
-.dropdown:hover .dropdown-menu {
-  display: block;  /* Mostrar el menú desplegable cuando el mouse está sobre el contenedor */
- }
 
-/* Estilo Adicional para los Enlaces */
-.nav-links a,
 .dropdown-menu a {
-  color: black; /* Color de los enlaces */
-  padding: 5px; /* Espaciado para los enlaces */
-  text-decoration: none; /* Eliminar subrayado de los enlaces */
+  color: #fff;
+  display: block;
+  margin: 5px 0;
+  text-decoration: none;
 }
 
-/* Estilo del botón de menú en móviles */
 .menu-toggle {
-  display: none; /* Ocultar el botón de menú en escritorio */
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Estilos Responsivos */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Ocultar los enlaces de navegación en móviles por defecto */
-    flex-direction: column; /* Mostrar enlaces en columna al abrir el menú */
-    position: absolute; /* Posicionar el menú en relación a la barra de navegación */
-    background-color:black; /* Fondo igual al de la barra de navegación */
-    width: 100%; /* Ancho completo */
-    z-index: 1; /* Para asegurarse de que el menú esté por encima de otros elementos */
-
+    display: none;
   }
 
   .nav-links.show {
-    display: flex; /* Mostrar enlaces cuando el menú está abierto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px 0;
+    gap: 10px;
   }
 
   .menu-toggle {
-    display: block; /* Mostrar el botón de menú en móviles */
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 60px;
+    display: inline;
   }
-}
-
-
-/* CSS HECHO PARA EL FOOTER*/
-/* Sección principal */
-section {
-  position: relative; /* Contenedor relativo para el contenido */
-  min-height: 100vh; /* Ajusta la altura mínima al 100% de la viewport */
-  padding-bottom: 1000px; /* Espacio para que el footer no tape el contenido */
 }
 
 /* Footer */
 .footer {
-  position: fixed; /* Mantener el footer en la parte inferior de la ventana */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100px; /* Altura del footer */
-  background-color: #BFD1E0; /* Color de fondo del footer */
-  color: #000000; /* Color del texto */
-  padding: 15px; /* Espaciado interno */
-  text-align: center; /* Centrar el texto */
-  font-size: 10px; /* Tamaño de la fuente */
-  z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
-  transition: transform 1s ease; /* Suavizar la aparición */
-  transform: translateY(100%); /* Ocultar el footer inicialmente */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/* Clase para mostrar el footer */
-.footer.visible {
-  transform: translateY(0); /* Mostrar el footer al desplazar */
-}
-
-/* Contenedor del footer */
 .footer-container {
-  max-width: 1200px; /* Ajusta el ancho máximo según tu diseño */
-  margin: 0 auto; /* Centra el contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Enlaces del footer */
-.footer-links {
-  display: flex; /* Cambiado a flex para alinear horizontalmente */
-  justify-content: center; /* Centra los enlaces horizontalmente */
-  gap: 20px; /* Espacio entre los enlaces */
-  opacity: 0; /* Inicialmente invisible */
-  transition: opacity 0.5s ease; /* Suavizar la aparición */
+.redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.footer-links.visible {
-  opacity: 1; /* Hacer visibles los enlaces cuando se añade la clase */
+.redes a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.footer-links a {
-  color: #ffffff; /* Color del texto de los enlaces */
-  text-decoration: none; /* Sin subrayado */
-  font-weight: bold; /* Texto en negrita */
-  padding: 5px 10px; /* Espaciado interno */
-  transition: color 0.3s, transform 0.3s; /* Transición suave */
+.redes a:hover {
+  color: #1A73E8;
+  transform: scale(1.1);
 }
 
-.footer-links a:hover {
-  color: #ffa500; /* Cambiar color al pasar el ratón */
-  transform: translateY(-3px); /* Efecto de elevación */
-}
+/* Estilos de animación para íconos */
+.redes a.facebook:hover { color: #3b5998; }
+.redes a.twitter:hover { color: #1da1f2; }
+.redes a.instagram:hover { color: #e4405f; }
+.redes a.google-plus:hover { color: #db4437; }
+.redes a.linkedin:hover { color: #0077b5; }
 
-/* Información de contacto */
 .footer-contact {
-  margin-top: 10px; /* Margen superior para separar del contenido */
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
 }
 
+.footer-contact p {
+  margin: 5px 0;
+}
+
+/* Media Query para Footer en pantallas grandes */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .redes,
+  .footer-contact {
+    margin: 0;
+  }
+}
