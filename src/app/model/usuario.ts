@@ -7,6 +7,7 @@ export class Usuario {
   telefono: string;
   email: string;
   fechaNacimiento: Date;
+  username: string;
   password: string;
 }
 
