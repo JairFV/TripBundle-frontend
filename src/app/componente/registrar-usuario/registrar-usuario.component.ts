@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+/*import {Component, inject, OnInit} from '@angular/core';
 import {MatFormField} from '@angular/material/form-field';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatInput} from '@angular/material/input';
@@ -102,3 +102,4 @@ export class RegistrarUsuarioComponent implements OnInit{
     }
   }
 }
+*/
