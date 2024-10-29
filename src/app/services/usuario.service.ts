@@ -1,8 +1,9 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Usuario} from '../model/usuario';
-import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
+import {environment} from "../../environments/environment";
+import {HttpClient} from "@angular/common/http";
+import {Observable, Subject} from "rxjs";
+import {Usuario} from "../model/usuario";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,17 +11,31 @@ import {environment} from '../../environments/environment';
 export class UsuarioService {
   private url = environment.apiUrl
   private http: HttpClient = inject(HttpClient);
+  private listaCambio = new Subject<Usuario[]>();
+
   constructor() { }
-  list(): Observable<any> {
+
+  list(): Observable<any>{
     return this.http.get<Usuario[]>(this.url + "/usuarios");
   }
-  insert(usuario: Usuario): Observable<any> {
-    return this.http.post(this.url + "/usuario", usuario);
+  listId(id: number): Observable<any>{
+    console.log(this.url + "/usuario/" + id)
+    return this.http.get<Usuario[]>(this.url + "/proveedor/" + id);
   }
-  update(usuario: Usuario): Observable<any> {
-    return this.http.put(this.url + "/usuario", usuario);
+  insert(usuario: Usuario): Observable<any>{
+    return this.http.post(this.url + "/insertarusuario", usuario);
   }
-  delete(id: Usuario): Observable<any> {
-    return this.http.delete(this.url + "/usuario/" + id);
+  update(proveedor: Usuario): Observable<any>{
+    return this.http.put(this.url + "/proveedor", proveedor);
   }
+  delete(id: number): Observable<any>{
+    return this.http.delete(this.url + "/proveedor/" + id);
+  }
+  setList(listaNueva : Usuario[]){
+    this.listaCambio.next(listaNueva);//enviar la nueva lista a los suscriptores
+  }
+  getList(){
+    return this.listaCambio.asObservable();
+  }
+
 }

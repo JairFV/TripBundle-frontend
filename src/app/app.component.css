@@ -13,9 +13,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #333;
+  background-color:#BFD1E0;
   padding: 10px 20px;
-  color: #fff;
+  color: #000000;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -38,7 +38,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #1A73E8;
+  color: #000000 ;
 }
 
 .dropdown {

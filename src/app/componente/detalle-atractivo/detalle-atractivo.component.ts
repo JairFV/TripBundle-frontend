@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-detalle-atractivo',
   standalone: true,
-  imports: [],
+  imports: [
+    NgOptimizedImage
+  ],
   templateUrl: './detalle-atractivo.component.html',
   styleUrl: './detalle-atractivo.component.css'
 })

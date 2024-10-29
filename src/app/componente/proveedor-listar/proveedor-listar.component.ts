@@ -45,15 +45,13 @@ import {ConfirmDialogoComponent} from "./confirm-dialogo/confirm-dialogo.compone
     MatButton,
     RouterLink
   ],
-  templateUrl: './lista-usuario.component.html',
-  styleUrl: './lista-usuario.component.css'
+  templateUrl: './proveedor-listar.component.html',
+  styleUrl: './proveedor-listar.component.css'
 })
-export class ListaUsuarioComponent implements OnInit, AfterViewInit {
+export class ProveedorListarComponent implements OnInit, AfterViewInit {
 
   lista: Usuario[] = [];
-  displayedColumns: string[] = ['id','dni','nombre','apellido', 'telefono', 'email', 'password','fechaNacimiento'
-  ];
-
+  displayedColumns = ['id', 'dni','nombre', 'apellido', 'telefono', 'email', 'email', 'fechaNacimiento', 'password','accion01','accion0'];
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource<Usuario>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -74,7 +72,7 @@ export class ListaUsuarioComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     console.log("Load Lista!");
-    // Suscribirse al observable de la lista de usuarios
+    // Suscribirse al observable de la lista de proveedores
     this.usuarioService.getList().subscribe(data => {
       this.dataSource.data = data;
     });
