@@ -11,6 +11,7 @@ import {DetalleFaunaComponent} from './componente/detalle-fauna/detalle-fauna.co
 import {DetalleComidaComponent} from './componente/detalle-comida/detalle-comida.component';
 import {DetalleAtractivoComponent} from './componente/detalle-atractivo/detalle-atractivo.component';
 import {TipoPaqueteComponent} from './componente/tipo-paquete/tipo-paquete.component';
+import {RegistroReservaComponent} from './componente/registro-reserva/registro-reserva.component';
 
 export const routes: Routes = [
 
@@ -27,5 +28,6 @@ export const routes: Routes = [
   {path: 'detalle-fauna', component: DetalleFaunaComponent},
   {path: 'detalle-comida', component: DetalleComidaComponent},
   {path: 'detalle-atractivo', component: DetalleAtractivoComponent},
-  {path: 'tipo-paquete', component: TipoPaqueteComponent}
+  {path: 'tipo-paquete', component: TipoPaqueteComponent},
+  {path: 'registro-reserva', component: RegistroReservaComponent},
 ];

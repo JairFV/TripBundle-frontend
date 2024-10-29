@@ -8,6 +8,15 @@
   transition: .2s linear;
 }
 
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fdf6ed;
+}
+
 .container{
   background:#FDF6ED;
   padding:15px 9%;
