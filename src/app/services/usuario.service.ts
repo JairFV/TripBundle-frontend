@@ -25,8 +25,8 @@ export class UsuarioService {
   insert(usuario: Usuario): Observable<any>{
     return this.http.post(this.url + "/insertarusuario", usuario);
   }
-  update(proveedor: Usuario): Observable<any>{
-    return this.http.put(this.url + "/proveedor", proveedor);
+  update(usuario: Usuario): Observable<any>{
+    return this.http.put(this.url + "/usuario", usuario);
   }
   delete(id: number): Observable<any>{
     return this.http.delete(this.url + "/proveedor/" + id);

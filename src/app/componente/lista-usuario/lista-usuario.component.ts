@@ -51,8 +51,7 @@ import {ConfirmDialogoComponent} from "./confirm-dialogo/confirm-dialogo.compone
 export class ListaUsuarioComponent implements OnInit, AfterViewInit {
 
   lista: Usuario[] = [];
-  displayedColumns: string[] = ['id','dni','nombre','apellido', 'telefono', 'email', 'password','fechaNacimiento'
-  ];
+  displayedColumns: string[] = ['id','dni','nombre','apellido', 'telefono', 'email', 'password','fechaNacimiento','accion01','accion02' ];
 
   dataSource: MatTableDataSource<Usuario> = new MatTableDataSource<Usuario>();
 

@@ -12,7 +12,8 @@ import {DetalleComidaComponent} from './componente/detalle-comida/detalle-comida
 import {DetalleAtractivoComponent} from './componente/detalle-atractivo/detalle-atractivo.component';
 import {TipoPaqueteComponent} from './componente/tipo-paquete/tipo-paquete.component';
 import {RegistroReservaComponent} from './componente/registro-reserva/registro-reserva.component';
-import {ProveedorListarComponent} from './componente/proveedor-listar/proveedor-listar.component';
+//import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
+//import {RegistrarUsuarioComponent} from './componente/registrar-usuario/registrar-usuario.component';
 //import {RegistrarUsuarioComponent} from './componente/registrar-usuario/registrar-usuario.component';
 
 export const routes: Routes = [
@@ -21,9 +22,9 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {path: 'acerca', component: AcercaComponent },
   {path: 'inicio-sesion', component: InicioSesionComponent},
-  {path: 'lista-usuario', component: ListaUsuarioComponent},
+  {path: 'lista-usuarios', component: ListaUsuarioComponent},
   {path: 'registrarse', component: RegistrarseComponent},
-  {path: 'proveedor-listar', component: ProveedorListarComponent},
+ // {path: 'nuevo-usuario', component: NuevoUsuarioComponent},
   //{path: 'registrar-usuario', component:RegistrarUsuarioComponent},
 
   {path: 'detalle-departamento', component: DetalleDepartamentoComponent},

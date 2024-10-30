@@ -1,4 +1,4 @@
-/*import {Component, inject, OnInit} from '@angular/core';
+/**import {Component, inject, OnInit} from '@angular/core';
 import {MatFormField} from '@angular/material/form-field';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatInput} from '@angular/material/input';
@@ -18,7 +18,7 @@ import {Usuario} from '../../model/usuario';
     MatDatepicker,
     MatDatepickerInput
   ],
-  templateUrl: './registrar-usuario.component.html',
+  templateUrl:'./registrar-usuario.component.html',
   styleUrl: './registrar-usuario.component.css'
 })
 export class RegistrarUsuarioComponent implements OnInit{
