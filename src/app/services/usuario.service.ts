@@ -20,7 +20,7 @@ export class UsuarioService {
   }
   listId(id: number): Observable<any>{
     console.log(this.url + "/usuario/" + id)
-    return this.http.get<Usuario[]>(this.url + "/proveedor/" + id);
+    return this.http.get<Usuario[]>(this.url + "/usuario/" + id);
   }
   insert(usuario: Usuario): Observable<any>{
     return this.http.post(this.url + "/insertarusuario", usuario);
@@ -29,7 +29,7 @@ export class UsuarioService {
     return this.http.put(this.url + "/usuario", usuario);
   }
   delete(id: number): Observable<any>{
-    return this.http.delete(this.url + "/proveedor/" + id);
+    return this.http.delete(this.url + "/usuario/" + id);
   }
   setList(listaNueva : Usuario[]){
     this.listaCambio.next(listaNueva);//enviar la nueva lista a los suscriptores

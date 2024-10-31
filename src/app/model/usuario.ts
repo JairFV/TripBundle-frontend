@@ -1,13 +1,14 @@
 // usuario.model.ts
 export class Usuario {
-  id: number = 0;
+  id: number ;
   dni: string;
   nombre: string;
   apellido: string;
   telefono: string;
   email: string;
-  fechaNacimiento: Date;
-  username: string;
   password: string;
+  fechaNacimiento: Date;
 }
+
+
 

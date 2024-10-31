@@ -1,83 +1,92 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.package-section {
+  display: flex; /* Establece un diseño de contenedor flexible */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  gap: 20px; /* Agrega espacio entre los elementos */
+  flex-wrap: wrap; /* Permite que los elementos pasen a una nueva línea si es necesario */
+  padding: 40px;
 }
+
 .package-container {
-  width: 350px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 25%; /* Define el ancho de cada paquete en 30% del contenedor */
+  border: 1px solid #ddd; /* Añade un borde gris claro */
+  border-radius: 8px; /* Redondea las esquinas del borde */
+  overflow: hidden; /* Oculta contenido que exceda el área del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave alrededor */
+  padding: 40px;
 }
+
 .image-container {
-  position: relative;
+  position: relative; /* Define la posición relativa para las etiquetas absolutas */
 }
+
 .image-container img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ajusta la imagen para ocupar todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
+
+.tag, .direct-flight {
+  position: absolute; /* Posiciona las etiquetas en relación al contenedor padre */
+  background-color: #ff6f61; /* Color de fondo naranja-rojizo */
+  color: #fff; /* Color de texto blanco */
+  padding: 4px 8px; /* Añade espacio alrededor del texto */
+  border-radius: 4px; /* Bordes redondeados para la etiqueta */
+  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+}
+
 .tag {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #8a2be2;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
+  top: 10px; /* Posiciona la etiqueta en la parte superior */
+  left: 10px; /* Posiciona la etiqueta a la izquierda */
 }
+
 .direct-flight {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #d500f9;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
+  bottom: 10px; /* Posiciona la etiqueta en la parte inferior */
+  right: 10px; /* Posiciona la etiqueta a la derecha */
 }
+
 .package-info {
-  padding: 15px;
+  padding: 15px; /* Espacio alrededor de la información del paquete */
+  text-align: center; /* Centra el texto */
 }
+
 .package-info h2 {
-  margin: 0;
-  color: #333;
+  font-size: 1.5rem; /* Tamaño de fuente grande para el título */
+  color: #333; /* Color gris oscuro */
 }
-.date {
-  font-size: 0.9em;
-  color: #555;
+
+.package-info .date, .economy, .miles {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  color: #555; /* Color gris medio */
 }
-.economy {
-  display: inline-block;
-  background-color: #800080;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 10px 0;
-  font-size: 0.9em;
+
+.package-info .price {
+  font-size: 1.2rem; /* Tamaño de fuente para el precio */
+  color: #333; /* Color gris oscuro */
+  margin: 10px 0; /* Espacio arriba y abajo del precio */
 }
-.price {
-  margin: 10px 0;
-  font-size: 1.2em;
-  color: #333;
-}
+
 .price del {
-  color: #888;
-  margin-right: 10px;
+  color: #777; /* Color gris claro para el precio anterior */
+  margin-right: 8px; /* Espacio a la derecha del precio tachado */
 }
-.discount {
-  color: red;
+
+.price .discount {
+  color: #ff6f61; /* Color naranja-rojizo para destacar descuento */
+  font-weight: bold; /* Fuente en negrita */
 }
+
 .price-details {
-  font-size: 0.9em;
-  color: #555;
+  font-size: 0.9rem; /* Tamaño de fuente pequeño */
+  color: #777; /* Color gris claro */
+}
+
+@media (max-width: 900px) {
+  .package-container {
+    width: calc(50% - 20px); /* Ajusta el ancho al 50% menos el gap en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .package-container {
+    width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+  }
 }
