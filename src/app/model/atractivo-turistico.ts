@@ -1,7 +1,7 @@
 export class AtractivoTuristico {
-  id: number = 0;
+  id: number ;
   nombre: string;
   descripcion: string;
-  valoracion: number = 0;
-  idDepartamento: number = 0;
+  valoracion: number ;
+  idDepartamento: number ;
 }

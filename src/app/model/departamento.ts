@@ -1,5 +1,5 @@
 export class Departamento {
-  id: number = 0;
+  id: number ;
   nombre: string;
   descripcion: string;
 }
