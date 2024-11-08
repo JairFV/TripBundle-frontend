@@ -1,6 +1,6 @@
 export class Flora {
-  id: number = 0;
+  id: number  ;
   nombre: string;
   descripcion: string;
-  idDepartamento: number = 0;
+  idDepartamento: number  ;
 }

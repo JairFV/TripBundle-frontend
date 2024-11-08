@@ -4,15 +4,17 @@
   gap: 20px; /* Agrega espacio entre los elementos */
   flex-wrap: wrap; /* Permite que los elementos pasen a una nueva línea si es necesario */
   padding: 40px;
+  background: #FDF6ED;
 }
 
 .package-container {
   width: 25%; /* Define el ancho de cada paquete en 30% del contenedor */
-  border: 1px solid #ddd; /* Añade un borde gris claro */
+  border:2px solid #ddd; /* Añade un borde gris claro */
   border-radius: 8px; /* Redondea las esquinas del borde */
   overflow: hidden; /* Oculta contenido que exceda el área del contenedor */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave alrededor */
-  padding: 40px;
+  padding: 20px;
+  background-color: #CCBAA5;
 }
 
 .image-container {

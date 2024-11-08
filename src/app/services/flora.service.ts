@@ -15,10 +15,10 @@ export class FloraService {
 
   constructor() { }
   list(): Observable<any>{
-    return this.http.get<Flora[]>(this.url + "/flora");
+    return this.http.get<Flora[]>(this.url + "/floras");
   }
   listId(id: number): Observable<any>{
-    console.log(this.url + "/flora/" + id)
+    console.log(this.url + "/floras/" + id)
     return this.http.get<Flora[]>(this.url + "/flora/" + id);
   }
   insert(flora: Flora): Observable<any>{
