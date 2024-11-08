@@ -1,15 +1,11 @@
 // usuario.model.ts
-export class Usuario {
+export class Administrador {
   id: number ;
-  dni: string;
+  codigo: string;
   nombre: string;
   apellido: string;
-  telefono: string;
   email: string;
-  username: string;
   password: string;
-  fechaNacimiento: Date;
-
 }
 
 

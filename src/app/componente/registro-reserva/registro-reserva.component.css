@@ -1,122 +1,100 @@
-/* From Uiverse.io by mi-series */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Altura completa de la pantalla */
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
   margin: 0;
-  background-color: #fdf6ed; /* Fondo oscuro para mayor contraste */
+  padding: 20px;
 }
 
 .container {
-  position: relative;
-  max-width: 500px;
-  width: 100%;
-  background: #f0e4d6;
-  padding: 25px;
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Máximo ancho del contenedor */
+  margin: auto; /* Centra el contenedor */
+  padding: 20px;
 }
 
-.container header {
-  font-size: 1.2rem;
-  color: #000;
-  font-weight: 600;
+header {
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.container .form {
-  margin-top: 15px;
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-.form .input-box {
-  width: 100%;
-  margin-top: 10px;
+.input-box {
+  margin-bottom: 15px;
 }
 
 .input-box label {
-  color: #000;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.form :where(.input-box input, .select-box) {
-  position: relative;
-  height: 35px;
-  width: 100%;
-  outline: none;
-  font-size: 1rem;
-  color: #808080;
-  margin-top: 5px;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  padding: 0 15px;
-  background: #ccbaa5;
+.input-box input,
+.select-box select {
+  width: 100%; /* Ancho completo */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
 }
 
-.input-box input:focus {
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.form .column {
+.column {
   display: flex;
-  column-gap: 15px;
+  justify-content: space-between;
 }
 
-.form .gender-box {
-  margin-top: 10px;
+.column .input-box {
+  flex: 1;
+  margin-right: 10px; /* Espacio entre columnas */
 }
 
-.form :where(.gender-option, .gender) {
+.column .input-box:last-child {
+  margin-right: 0; /* Elimina margen del último elemento */
+}
+
+.gender-box {
+  margin-bottom: 15px;
+}
+
+.gender-option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender {
   display: flex;
   align-items: center;
-  column-gap: 50px;
-  flex-wrap: wrap;
-}
-
-.form .gender {
-  column-gap: 5px;
 }
 
 .gender input {
-  accent-color: #6D96A6;
+  margin-right: 5px;
 }
 
-.form :where(.gender input, .gender label) {
-  cursor: pointer;
-}
-
-.gender label {
-  color: #000;
-}
-
-.address :where(input, .select-box) {
-  margin-top: 10px;
-}
-
-.select-box select {
-  height: 100%;
-  width: 100%;
-  outline: none;
+.button {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 10px;
   border: none;
-  color: #808080;
-  font-size: 1rem;
-  background: #ccbaa5;
-}
-
-.form button {
-  height: 40px;
-  width: 100%;
-  color: #000;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 15px;
-  border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background: #6D96A6;
+  font-size: 16px;
 }
 
-.form button:hover {
-  color: #ffffff;
-  background: #000000;
+.button:hover {
+  background-color: #45a049; /* Color del botón al pasar el mouse */
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+  }
+  .column .input-box {
+    margin-right: 0; /* Elimina margen entre columnas en pantallas pequeñas */
+  }
 }
