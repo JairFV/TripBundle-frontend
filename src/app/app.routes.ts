@@ -12,8 +12,15 @@ import {DetalleComidaComponent} from './componente/detalle-comida/detalle-comida
 import {DetalleAtractivoComponent} from './componente/detalle-atractivo/detalle-atractivo.component';
 import {TipoPaqueteComponent} from './componente/tipo-paquete/tipo-paquete.component';
 import {RegistroReservaComponent} from './componente/registro-reserva/registro-reserva.component';
-//import {RegistrarUsuarioComponent} from './componente/registrar-usuario/registrar-usuario.component';
+import {ListaAtractivoTuristicoComponent} from './componente/lista-atractivo-turistico/lista-atractivo-turistico.component';
+import {ListaDepartamentoComponent} from './componente/lista-departamento/lista-departamento.component';
+import {ListaFaunaComponent} from './componente/lista-fauna/lista-fauna.component';
+import {ListaFloraComponent} from './componente/lista-flora/lista-flora.component';
+import {ListaAdministradorComponent} from './componente/lista-administrador/lista-administrador.component';
+import {ListaPagoComponent} from './componente/lista-pago/lista-pago.component';
 import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
+//import {RegistrarUsuarioComponent} from './componente/registrar-usuario/registrar-usuario.component';
+//import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
 //import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
 
 
@@ -25,8 +32,17 @@ export const routes: Routes = [
   {path: 'inicio-sesion', component: InicioSesionComponent},
   {path: 'lista-usuarios', component: ListaUsuarioComponent},
   {path: 'registrarse', component: RegistrarseComponent},
+  {path: 'registrar-reserva', component:RegistroReservaComponent},
+  {path: 'lista-atractivo-turistico', component: ListaAtractivoTuristicoComponent},
+  {path: 'lista-departamento', component: ListaDepartamentoComponent},
+  {path: 'lista-fauna', component: ListaFaunaComponent},
+  {path: 'lista-flora', component: ListaFloraComponent},
+  {path:'lista-administrador',component:ListaAdministradorComponent},
+  {path:'lista-pago', component: ListaPagoComponent},
+  {path: 'nuevo-usuario/:id', component: NuevoUsuarioComponent},
   {path: 'nuevo-usuario', component: NuevoUsuarioComponent},
-  //{path: 'registrar-usuario', component:RegistrarUsuarioComponent},
+
+
 
   {path: 'detalle-departamento', component: DetalleDepartamentoComponent},
   {path: 'opcion-departamento', component: OpcionDepartamentoComponent},
