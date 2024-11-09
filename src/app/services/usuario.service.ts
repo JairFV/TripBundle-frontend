@@ -18,9 +18,9 @@ export class UsuarioService {
   list(): Observable<any>{
     return this.http.get<Usuario[]>(this.url + "/usuarios");
   }
-  listId(id: number): Observable<any>{
-    console.log(this.url + "/usuario/" + id)
-    return this.http.get<Usuario[]>(this.url + "/usuario/" + id);
+  listId(id: number): Observable<Usuario> {
+    console.log(this.url + "/usuario/" + id);
+    return this.http.get<Usuario>(this.url + "/usuario/" + id);
   }
   insert(usuario: Usuario): Observable<any>{
     return this.http.post(this.url + "/insertarusuario", usuario);
