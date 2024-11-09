@@ -1,0 +1,50 @@
+<p>lista-administrador works!</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+    </ng-container>
+
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="monto">
+      <th mat-header-cell *matHeaderCellDef> Monto </th>
+      <td mat-cell *matCellDef="let element"> {{element.monto}} </td>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="metodoPago">
+      <th mat-header-cell *matHeaderCellDef> MetodoPago </th>
+      <td mat-cell *matCellDef="let element"> {{element.metodoPago}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="fechaPago">
+      <th mat-header-cell *matHeaderCellDef> FechaPago </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaPago}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="idReserva">
+      <th mat-header-cell *matHeaderCellDef> IdReserva </th>
+      <td mat-cell *matCellDef="let element"> {{element.idReserva}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

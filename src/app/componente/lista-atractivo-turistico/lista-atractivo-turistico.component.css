@@ -1,0 +1,16 @@
+.form-container {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
