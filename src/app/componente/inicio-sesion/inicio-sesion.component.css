@@ -1,85 +1,11 @@
-html, body {
-  height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
-  margin: 0; /* Elimina márgenes por defecto */
-  display: flex; /* Utiliza flexbox para el centrado */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  background-color: #e0e0e0; /* Color de fondo opcional */
+.example-card {
+  margin: 0 auto;
+  width: 500px;
 }
 
-.form {
-  position: absolute; /* Utiliza posición absoluta para el centrado */
-  top: 50%; /* 50% desde la parte superior */
-  left: 50%; /* 50% desde la izquierda */
-  transform: translate(-50%, -50%); /* Mueve el elemento hacia arriba y a la izquierda */
+.form-container {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en columna */
-  gap: 10px; /* Espacio entre los campos */
-  padding: 20px; /* Espaciado interno */
-  background-color: #f0e4d6; /* Color de fondo del formulario */
-  border-radius: 15px; /* Esquinas redondeadas */
-  transition: 0.4s ease-in-out; /* Transición suave */
-  width: 90%; /* Ancho relativo */
-  max-width: 470px; /* Ancho máximo */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
+  flex-direction: column;
 }
 
-.field {
-  display: flex; /* Utiliza flexbox para alinear el icono y el campo */
-  align-items: center; /* Centra verticalmente */
-}
 
-.input-icon {
-  margin-right: 10px; /* Espacio entre el ícono y el campo de entrada */
-}
-
-.input-field {
-  flex: 1; /* Permite que el campo de entrada ocupe el espacio disponible */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 5px; /* Esquinas redondeadas */
-  transition: border-color 0.3s; /* Transición suave para el borde */
-}
-
-.input-field:focus {
-  border-color: #007bff; /* Color del borde al enfocar */
-  outline: none; /* Sin contorno */
-}
-
-.btn {
-  display: flex; /* Utiliza flexbox para alinear botones */
-  gap: 10px; /* Espacio entre los botones */
-}
-
-.button1, .button2, .button3 {
-  flex: 1; /* Permite que los botones ocupen el mismo espacio */
-  padding: 10px; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Esquinas redondeadas */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  transition: background-color 0.3s; /* Transición suave para el color de fondo */
-}
-
-.button1 {
-  background-color: #007bff; /* Color de fondo para el botón de inicio de sesión */
-  color: white; /* Color del texto */
-}
-
-.button2 {
-  background-color: #6c757d; /* Color de fondo para el botón de registro */
-  color: white; /* Color del texto */
-}
-
-.button3 {
-  background-color: transparent; /* Botón sin fondo */
-  color: #007bff; /* Color del texto */
-  text-align: center; /* Centra el texto */
-}
-
-.button1:hover, .button2:hover {
-  background-color: rgba(0, 123, 255, 0.8); /* Color al pasar el cursor por encima */
-}
-
-.button3:hover {
-  text-decoration: underline; /* Subraya al pasar el cursor por encima */
-}

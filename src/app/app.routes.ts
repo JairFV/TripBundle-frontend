@@ -24,11 +24,13 @@ import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.co
 //import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
 
 
+
 export const routes: Routes = [
 
   { path: '', component: HomeComponent , pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   {path: 'acerca', component: AcercaComponent },
+
   {path: 'inicio-sesion', component: InicioSesionComponent},
   {path: 'lista-usuarios', component: ListaUsuarioComponent},
   {path: 'registrarse', component: RegistrarseComponent},
@@ -41,6 +43,7 @@ export const routes: Routes = [
   {path:'lista-pago', component: ListaPagoComponent},
   {path: 'nuevo-usuario/:id', component: NuevoUsuarioComponent},
   {path: 'nuevo-usuario', component: NuevoUsuarioComponent},
+
 
 
 
