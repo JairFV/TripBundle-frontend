@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
 import {NavbarComponent} from './componente/navbar/navbar.component';
@@ -17,4 +17,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() showLoginButton: boolean = true; // default is true
 }

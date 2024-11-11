@@ -1,14 +1,13 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
-import { RequestDto } from '../../model/request-dto';
-import { ResponseDto } from '../../model/response-dto';
+import {ResponseDto} from "../../model/response-dto";
 import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { MatButton } from '@angular/material/button';
 import {UserDto} from '../../model/user-dto';
+import {LoginService} from '../../services/login-service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -76,4 +75,5 @@ export class InicioSesionComponent   {
       console.log("Formulario no valido");
     }
   }
+
 }

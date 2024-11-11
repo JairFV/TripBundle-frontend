@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
-import {NavbarComponent} from '../navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {Router} from '@angular/router';
+import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    NavbarComponent
+    NavbarComponent,
+    MatToolbarModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
