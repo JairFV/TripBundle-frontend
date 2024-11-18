@@ -9,7 +9,7 @@ import {environment} from "../../environments/environment";
 })
 export class DepartamentoService {
 
-  private url = `${environment.apiUrl}/departamentos`;
+  private url = environment.apiUrl + '/trip'
   private listaSubject = new BehaviorSubject<Departamento[]>([]);
 
   constructor(private http: HttpClient) {}

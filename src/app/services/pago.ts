@@ -10,7 +10,7 @@ import {Pago} from '../model/pago';
   providedIn: 'root'
 })
 export class PagoService {
-  private url = environment.apiUrl
+  private url = environment.apiUrl + '/trip'
   private http: HttpClient = inject(HttpClient);
   private listaCambio = new Subject<Pago[]>();
 

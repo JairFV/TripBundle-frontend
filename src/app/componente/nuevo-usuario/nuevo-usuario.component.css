@@ -1,9 +1,19 @@
-.example-card {
-  margin: 0 auto;
-  width: 600px;
-}
-
-.form-container {
+.center-form {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* Asegura que el contenido se alinee en la parte superior del formulario */
+  align-items: center;
+  width: 30%;
+  max-width: 400px; /* Limita el tamaño máximo del formulario */
+  padding: 20px; /* Agrega algo de espacio dentro del formulario */
+  background-color: #fff; /* Agrega un color de fondo si lo deseas */
+  border-radius: 8px; /* Opcional, para bordes redondeados */
 }
+
+mat-form-field {
+  width: 30%;
+  margin-bottom: 16px;
+  padding-top: 20px;
+
+}
+

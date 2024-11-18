@@ -7,7 +7,10 @@ import {InicioSesionComponent} from './componente/inicio-sesion/inicio-sesion.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NgClass, NavbarComponent, InicioSesionComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink, NgClass,
+    NavbarComponent ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -18,4 +21,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input() showLoginButton: boolean = true; // default is true
+
+
 }

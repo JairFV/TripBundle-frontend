@@ -1,11 +1,40 @@
-.example-card {
-  margin: 0 auto;
-  width: 500px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
-.form-container {
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+mat-card-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
+mat-form-field {
+  width: 100%;
+}
 
+.error-message {
+  color: #f44336;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 16px;
+}

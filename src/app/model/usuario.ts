@@ -8,7 +8,7 @@ export class Usuario {
   email: string;
   username: string;
   password: string;
-  fechaNacimiento: Date;
+  fechaNacimiento: Date = new Date();
    rol: string;
 
 }

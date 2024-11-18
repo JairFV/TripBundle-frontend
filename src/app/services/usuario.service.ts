@@ -9,14 +9,19 @@ import {Usuario} from "../model/usuario";
   providedIn: 'root'
 })
 export class UsuarioService {
-  private url = environment.apiUrl
+  private url = environment.apiUrl + '/trip'
   private http: HttpClient = inject(HttpClient);
   private listaCambio = new Subject<Usuario[]>();
 
   constructor() { }
 
   list(): Observable<any>{
-    return this.http.get<Usuario[]>(this.url + "/usuarios");
+    const token = localStorage.getItem('token'); // Recupera el token del localStorage
+    if (!token) {
+      // Si no hay token, no permitimos la solicitud
+      throw new Error('Token no encontrado');
+    }
+    return this.http.get<Usuario[]>(this.url + "usuarios");
   }
   listId(id: number): Observable<Usuario> {
     console.log(this.url + "/usuario/" + id);
@@ -38,4 +43,15 @@ export class UsuarioService {
     return this.listaCambio.asObservable();
   }
 
+
+  getAuthoritiesActual(): string[] {
+    const token = localStorage.getItem('token'); // Reemplaza con tu mecanismo de almacenamiento
+    if (!token) return [];
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1])); // Decodifica el token
+      return payload.authorities || []; // Ajusta según el formato del token
+    } catch (e) {
+      return [];
+    }
+  }
 }

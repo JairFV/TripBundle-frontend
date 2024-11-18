@@ -9,8 +9,7 @@ import {AtractivoTuristico} from '../model/atractivo-turistico';
   providedIn: 'root'
 })
 export class AtractivoTuristicoService {
-
-  private url = environment.apiUrl
+  private url = environment.apiUrl + '/trip'
   private http: HttpClient = inject(HttpClient);
   private listaCambio = new Subject<AtractivoTuristico[]>();
 

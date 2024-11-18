@@ -9,7 +9,7 @@ import {Administrador} from '../model/administrador';
   providedIn: 'root'
 })
 export class AdministradorService {
-  private url = environment.apiUrl
+  private url = environment.apiUrl + '/trip'
   private http: HttpClient = inject(HttpClient);
   private listaCambio = new Subject<Administrador[]>();
 

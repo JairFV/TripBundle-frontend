@@ -9,7 +9,7 @@ import {Flora} from '../model/flora';
   providedIn: 'root'
 })
 export class FloraService {
-  private url = environment.apiUrl
+  private url = environment.apiUrl + '/trip'
   private http: HttpClient = inject(HttpClient);
   private listaCambio = new Subject<Flora[]>();
 

@@ -23,28 +23,30 @@ import {
   MatDialogTitle
 } from "@angular/material/dialog";
 import {ConfirmDialogoComponent} from "./confirm-dialogo/confirm-dialogo.component";
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-lista-usuario',
   standalone: true,
-  imports: [
-    MatTable,
-    MatColumnDef,
-    MatHeaderCell,
-    MatCell,
-    MatHeaderCellDef,
-    MatCellDef,
-    MatHeaderRow,
-    MatRow,
-    MatHeaderRowDef,
-    MatRowDef,
-    MatPaginator,
-    DatePipe,
-    MatSort,
-    MatSortHeader,
-    MatButton,
-    RouterLink
-  ],
+    imports: [
+        MatTable,
+        MatColumnDef,
+        MatHeaderCell,
+        MatCell,
+        MatHeaderCellDef,
+        MatCellDef,
+        MatHeaderRow,
+        MatRow,
+        MatHeaderRowDef,
+        MatRowDef,
+        MatPaginator,
+        DatePipe,
+        MatSort,
+        MatSortHeader,
+        MatButton,
+        RouterLink,
+        NavbarComponent
+    ],
   templateUrl: './lista-usuario.component.html',
   styleUrl: './lista-usuario.component.css'
 })

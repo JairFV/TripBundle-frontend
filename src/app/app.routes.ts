@@ -19,9 +19,7 @@ import {ListaFloraComponent} from './componente/lista-flora/lista-flora.componen
 import {ListaAdministradorComponent} from './componente/lista-administrador/lista-administrador.component';
 import {ListaPagoComponent} from './componente/lista-pago/lista-pago.component';
 import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
-//import {RegistrarUsuarioComponent} from './componente/registrar-usuario/registrar-usuario.component';
-//import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
-//import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
+
 
 
 
@@ -43,7 +41,8 @@ export const routes: Routes = [
   {path:'lista-pago', component: ListaPagoComponent},
   {path: 'nuevo-usuario/:id', component: NuevoUsuarioComponent},
   {path: 'nuevo-usuario', component: NuevoUsuarioComponent},
-
+  {path: '**',redirectTo: '/home'},
+  { path: '**', redirectTo: '/login' },
 
 
 
@@ -56,3 +55,4 @@ export const routes: Routes = [
   {path: 'tipo-paquete', component: TipoPaqueteComponent},
   {path: 'registro-reserva', component: RegistroReservaComponent},
 ];
+

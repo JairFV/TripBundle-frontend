@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 30%; /* 30% de la pantalla, pero se ajusta */
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Para pantallas más pequeñas, se ajusta al 100% */
+  }
+}

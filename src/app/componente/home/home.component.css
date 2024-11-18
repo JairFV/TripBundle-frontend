@@ -1,7 +1,7 @@
 .tripbundle-section {
   background-color:#f0e4d6; /* Color de fondo suave */
-  padding: 40px; /* Espaciado interno */
-  margin: 20px 0; /* Espaciado externo */
+  padding: 20px; /* Espaciado interno */
+
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
   text-align: center; /* Centrar texto */
@@ -9,7 +9,7 @@
 
 .tripbundle-section h2 {
   color: #2c3e50; /* Color del encabezado */
-  font-size: 2.2em; /* Tamaño de fuente mayor */
+
   margin-bottom: 20px; /* Espacio debajo del título */
 }
 
@@ -108,4 +108,85 @@
   width: 90%;
   height: 100%;
   border-radius: 50px 15%;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+
+/* Estilos para el carrusel */
+#header-carousel {
+  position: relative;
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 100vh; /* Asegura que cada elemento del carrusel ocupe toda la altura */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+  height: 100%; /* Altura completa del contenedor */
+  width: 100%; /* Ancho completo del contenedor */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición */
+  text-align: center; /* Alineación central del texto */
+}
+
+.carousel-caption h4 {
+  font-size: 2rem; /* Tamaño de fuente para el subtítulo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
+
+.carousel-caption h1 {
+  font-size: 4rem; /* Tamaño de fuente para el título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 45px; /* Ancho de los controles */
+  height: 45px; /* Alto de los controles */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo de los iconos de control */
+  border-radius: 50%; /* Bordes redondeados */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carousel-caption h4 {
+    font-size: 1.5rem; /* Tamaño de fuente para pantallas pequeñas */
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.5rem; /* Tamaño de fuente para pantallas pequeñas */
+  }
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
 }

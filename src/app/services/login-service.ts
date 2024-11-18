@@ -1,37 +1,29 @@
-import {inject, Injectable} from '@angular/core';
-import {map, Observable, Subject} from 'rxjs';
-import {Usuario} from '../model/usuario';
-import {environment} from '../../environments/environment';
-import {HttpClient} from '@angular/common/http';
-import {Fauna} from '../model/fauna';
-import {Pago} from '../model/pago';
-import {UserDto} from '../model/user-dto';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { UserDto } from '../model/user-dto';
+import { JwtResponse } from '../model/JwtResponse';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private url = environment.apiUrl
-  private http: HttpClient = inject(HttpClient);
-  constructor() { }
+  private readonly API_URL = 'http://localhost:8080';
 
-  login(userDto:UserDto ): Observable<any> {
-    console.log("Enviando:", UserDto)
-    return this.http.post(this.url + "/authenticate", UserDto,
-      {observe: 'response'}).pipe(map((response) => {
-        const body = response.body;
-        console.log("Body:", body)
-        const headers = response.headers;
-        const bearerToken = headers.get('Authorization')!;
-        const token = bearerToken.replace('Bearer ', '');
-        console.log("Authorization:", bearerToken)
-        localStorage.setItem('token', token);
-        return body;
-      }
-    ));
-  }
+  constructor(private http: HttpClient) {}
 
-  getToken(){
-    return localStorage.getItem('token');
+  login(credentials: UserDto): Observable<JwtResponse> {
+    return this.http.post<JwtResponse>(`${this.API_URL}/trip/login`, credentials).pipe(
+      tap(response => {
+        if (response.token) {
+          // Guardar el token y el rol en localStorage
+          localStorage.setItem('jwttoken', response.token);
+          localStorage.setItem('role', response.rol);  // Guardar el rol
+          console.log('Token guardado tras login:', response.token);
+          console.log('Rol guardado:', response.rol);
+        }
+      })
+    );
   }
 }

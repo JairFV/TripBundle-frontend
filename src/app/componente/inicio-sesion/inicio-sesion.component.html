@@ -1,18 +1,42 @@
-<mat-card class="example-card">
-  <mat-card-title>Acceso</mat-card-title>
-  <mat-card-content>
-    <form [formGroup]="loginForm" class="form-container">
-      <mat-form-field appearance="fill">
-        <mat-label>Usuario</mat-label>
-        <input matInput formControlName="username" placeholder="Ingrese su usuario" />
-      </mat-form-field>
+<div class="login-container">
+  <mat-card>
+    <mat-card-title>Inicio de Sesión</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input matInput formControlName="username"
+                 [attr.disabled]="loading ? '' : null">
+          <mat-error *ngIf="usernameControl?.touched && usernameControl?.errors?.['required']">
+            El usuario es requerido
+          </mat-error>
+          <mat-error *ngIf="usernameControl?.touched && usernameControl?.errors?.['minlength']">
+            El usuario debe tener al menos 3 caracteres
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password" placeholder="Ingrese su password" />
-      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="password"
+                 [attr.disabled]="loading ? '' : null">
+          <mat-error *ngIf="passwordControl?.touched && passwordControl?.errors?.['required']">
+            La contraseña es requerida
+          </mat-error>
+          <mat-error *ngIf="passwordControl?.touched && passwordControl?.errors?.['minlength']">
+            La contraseña debe tener al menos 6 caracteres
+          </mat-error>
+        </mat-form-field>
 
-      <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+        <div class="error-message" *ngIf="loginError">
+          {{ loginError }}
+        </div>
+
+        <button mat-raised-button color="primary"
+                type="submit"
+                [disabled]="loading || !loginForm.valid">
+          {{ loading ? 'Iniciando sesión...' : 'Iniciar Sesión' }}
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
