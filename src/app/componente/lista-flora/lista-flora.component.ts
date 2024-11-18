@@ -17,25 +17,27 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogoComponent} from '../lista-usuario/confirm-dialogo/confirm-dialogo.component';
 import {Flora} from '../../model/flora';
 import {FloraService} from '../../services/flora.service';
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-lista-flora',
   standalone: true,
-  imports: [
-    MatCell,
-    MatCellDef,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderRow,
-    MatHeaderRowDef,
-    MatPaginator,
-    MatRow,
-    MatRowDef,
-    MatSort,
-    MatSortHeader,
-    MatTable,
-    MatHeaderCellDef
-  ],
+    imports: [
+        MatCell,
+        MatCellDef,
+        MatColumnDef,
+        MatHeaderCell,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatPaginator,
+        MatRow,
+        MatRowDef,
+        MatSort,
+        MatSortHeader,
+        MatTable,
+        MatHeaderCellDef,
+        NavbarComponent
+    ],
   templateUrl: './lista-flora.component.html',
   styleUrl: './lista-flora.component.css'
 })

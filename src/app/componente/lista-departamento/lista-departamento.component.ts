@@ -19,6 +19,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogoComponent} from '../lista-usuario/confirm-dialogo/confirm-dialogo.component';
 import {Departamento} from '../../model/departamento';
 import {DepartamentoService} from '../../services/departamento.service';
+import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-lista-departamento',
@@ -36,7 +37,8 @@ import {DepartamentoService} from '../../services/departamento.service';
     MatHeaderRowDef,
     MatRow,
     MatRowDef,
-    MatPaginator
+    MatPaginator,
+    NavbarComponent
   ],
   templateUrl: './lista-departamento.component.html',
   styleUrl: './lista-departamento.component.css'

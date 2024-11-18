@@ -19,14 +19,16 @@ import {ListaFloraComponent} from './componente/lista-flora/lista-flora.componen
 import {ListaAdministradorComponent} from './componente/lista-administrador/lista-administrador.component';
 import {ListaPagoComponent} from './componente/lista-pago/lista-pago.component';
 import {NuevoUsuarioComponent} from './componente/nuevo-usuario/nuevo-usuario.component';
+import {guardarLoginGuard} from './security/guardar-login.guard';
+import {ListaRegistrosComponent} from './componente/lista-registros/lista-registros.component';
 
 
 
 
 export const routes: Routes = [
 
-  { path: '', component: HomeComponent , pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  {path: '', component: InicioSesionComponent, pathMatch: 'full'},
+  { path: 'home', component: HomeComponent,  canActivate: [guardarLoginGuard]},
   {path: 'acerca', component: AcercaComponent },
 
   {path: 'inicio-sesion', component: InicioSesionComponent},
@@ -39,10 +41,12 @@ export const routes: Routes = [
   {path: 'lista-flora', component: ListaFloraComponent},
   {path:'lista-administrador',component:ListaAdministradorComponent},
   {path:'lista-pago', component: ListaPagoComponent},
+  {path: 'lista-registros',component:ListaRegistrosComponent},
   {path: 'nuevo-usuario/:id', component: NuevoUsuarioComponent},
   {path: 'nuevo-usuario', component: NuevoUsuarioComponent},
   {path: '**',redirectTo: '/home'},
   { path: '**', redirectTo: '/login' },
+
 
 
 

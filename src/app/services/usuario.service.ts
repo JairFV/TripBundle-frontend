@@ -1,6 +1,6 @@
 import {inject, Injectable} from '@angular/core';
 import {environment} from "../../environments/environment";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, Subject} from "rxjs";
 import {Usuario} from "../model/usuario";
 
@@ -21,14 +21,25 @@ export class UsuarioService {
       // Si no hay token, no permitimos la solicitud
       throw new Error('Token no encontrado');
     }
-    return this.http.get<Usuario[]>(this.url + "usuarios");
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<Usuario[]>(`${this.url}/usuarios`,{ headers });
   }
   listId(id: number): Observable<Usuario> {
     console.log(this.url + "/usuario/" + id);
     return this.http.get<Usuario>(this.url + "/usuario/" + id);
   }
   insert(usuario: Usuario): Observable<any>{
-    return this.http.post(this.url + "/insertarusuario", usuario);
+    const token = localStorage.getItem('token'); // Recupera el token del localStorage
+    if (!token) {
+      // Si no hay token, no permitimos la solicitud
+      throw new Error('Token no encontrado');
+    }
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<Usuario[]>(`${this.url}/insertarUsuario`,{ headers });
   }
   update(usuario: Usuario): Observable<any>{
     return this.http.put(this.url + "/usuario", usuario);

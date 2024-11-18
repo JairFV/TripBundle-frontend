@@ -18,25 +18,27 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogoComponent} from '../lista-usuario/confirm-dialogo/confirm-dialogo.component';
 import {Fauna} from '../../model/fauna';
 import {FaunaService} from '../../services/fauna.service';
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-lista-fauna',
   standalone: true,
-  imports: [
-    MatCell,
-    MatCellDef,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderRow,
-    MatHeaderRowDef,
-    MatPaginator,
-    MatRow,
-    MatRowDef,
-    MatSort,
-    MatSortHeader,
-    MatTable,
-    MatHeaderCellDef
-  ],
+    imports: [
+        MatCell,
+        MatCellDef,
+        MatColumnDef,
+        MatHeaderCell,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatPaginator,
+        MatRow,
+        MatRowDef,
+        MatSort,
+        MatSortHeader,
+        MatTable,
+        MatHeaderCellDef,
+        NavbarComponent
+    ],
   templateUrl: './lista-fauna.component.html',
   styleUrl: './lista-fauna.component.css'
 })
