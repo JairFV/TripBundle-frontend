@@ -1,142 +1,47 @@
-/* Contenedor principal para centrar el formulario */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Altura completa de la pantalla */
-  margin: 0;
-  background-color: #fdf6ed; /* Fondo oscuro para mayor contraste */
-}
-
-/* Estilos del formulario */
-.form {
+.conteiner {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  padding: 50px;
-  border-radius: 20px;
-  position: relative;
-  background-color: #f0e4d6;
-  color: #000000;
-  border: 1px solid #333;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para destacar */
-}
-
-.title {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
   align-items: center;
-  padding-left: 30px;
-  color: #000000;
-}
-
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: #000000;
-}
-
-.title::after {
-  animation: pulse 1s linear infinite;
-}
-
-.message,
-.signin {
-  font-size: 14.5px;
-  color: #000000;
-}
-
-.signin {
-  text-align: center;
-}
-
-.signin a:hover {
-  text-decoration: underline royalblue;
-}
-
-.signin a {
-  color: #000000;
-}
-
-.flex {
-  display: flex;
+  justify-content: center;
+  height: 90%;
   width: 100%;
-  gap: 6px;
+  background-color: #f0e4d6;
 }
 
-.form label {
-  position: relative;
+.form-container {
+  height: 80%;
+  text-align: center;
+  width: 410px;
+  border-radius: 0.75rem;
+  background-color: #CCBAA5;
+  padding: 2rem;
+  color: black;
 }
 
-.form label .input {
-  background-color: #ccbaa5;
-  color: #000000;
-  width: 90%;
-  padding: 20px 5px 5px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
+.conteniner_Datos{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.matIzquierdo{
+  width: 100%;
+  border-radius: 20px;
+  margin: 0% 10px 0% 0%;
+}
+.example-full-width {
+  width: 100%;
+  border-radius: 20px;
 }
 
-.form label .input + span {
-  color: #000000;
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
-}
-
-.form label .input:placeholder-shown + span {
-  top: 12.5px;
-  font-size: 0.9em;
-}
-
-.form label .input:focus + span,
-.form label .input:valid + span {
-  color: #000000;
-  top: 0px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.input {
-  font-size: medium;
-}
-
-.submit {
-  border: none;
-  outline: none;
-  padding: 15px;
-  border-radius: 10px;
-  color: #000000;
-  font-size: 16px;
-  transform: .3s ease;
+.button {
+  width: 80%;
+  height: 7%;
+  font-size: 130%;
   background-color: #6D96A6;
-}
-
-.submit:hover {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
 }

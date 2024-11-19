@@ -22,6 +22,7 @@ import {ConfirmDialogoComponent} from '../lista-usuario/confirm-dialogo/confirm-
 import {UsuarioService} from '../../services/usuario.service';
 import {MatDialog} from '@angular/material/dialog';
 import {AtractivoTuristicoService} from '../../services/atractivoTuristico.service';
+import {NavbarComponent} from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-lista-atractivo-turistico',
@@ -44,7 +45,8 @@ import {AtractivoTuristicoService} from '../../services/atractivoTuristico.servi
     MatSortHeader,
     MatTable,
     MatHeaderCellDef,
-    RouterLink
+    RouterLink,
+    NavbarComponent
   ],
   templateUrl: './lista-atractivo-turistico.component.html',
   styleUrl: './lista-atractivo-turistico.component.css'

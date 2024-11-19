@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Departamento } from '../model/departamento';
 import {environment} from "../../environments/environment";
+import {Usuario} from '../model/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,16 @@ export class DepartamentoService {
 
   constructor(private http: HttpClient) {}
 
-  // Get the observable list
-  getList(): Observable<Departamento[]> {
-    return this.listaSubject.asObservable();
+  getList(): Observable<any>{
+    const token = localStorage.getItem('token'); // Recupera el token del localStorage
+    if (!token) {
+      // Si no hay token, no permitimos la solicitud
+      throw new Error('Token no encontrado');
+    }
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<Departamento[]>(`${this.url}/departamentos`,{ headers });
   }
 
   // Set a new list for subscribers

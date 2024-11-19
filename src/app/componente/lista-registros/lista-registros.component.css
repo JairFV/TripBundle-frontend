@@ -1,0 +1,71 @@
+.city-item-container {
+  display: flex;
+  flex-wrap: wrap; /* Para adaptarse a múltiples elementos */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espaciado entre elementos */
+  padding:20px;
+  background-color:#f0e4d6; /* Fondo neutro para mejor contraste */
+}
+.city-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdf6ed; /* Fondo claro para contraste */
+  padding: 16px;
+  border: 1px solid #ddd; /* Bordes suaves */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: 16px auto; /* Centrarse y espaciado */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.city-item:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.city-item img {
+  width: 100%; /* Imagen se ajusta al ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+  max-height: 200px; /* Limita la altura máxima */
+  border-radius: 4px; /* Bordes redondeados */
+  object-fit: cover; /* Recorta la imagen si es necesario para ajustarse */
+  margin-bottom: 8px;
+}
+
+.city-item p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.city-item h4 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.city-item button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.city-item button:hover {
+  background-color: #3e8e41; /* Verde más oscuro en hover */
+}
+
+.city-item button:focus {
+  outline: 3px dashed #4CAF50;
+  outline-offset: 4px;
+}
+

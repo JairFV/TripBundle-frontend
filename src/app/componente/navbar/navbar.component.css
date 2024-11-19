@@ -1,0 +1,101 @@
+/* Estilo para el texto en la barra de herramientas */
+span {
+  margin: auto; /* Centra el contenido dentro de su contenedor */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+/* Espaciador para la barra de herramientas */
+.example-spacer {
+  flex: 1 1 auto; /* Permite que el espaciador crezca y se contraiga según sea necesario */
+}
+
+/* Estilo general para los botones */
+button {
+  margin:8px; /* Espaciado horizontal entre botones */
+}
+
+/* Estilo para la fila de la barra de herramientas */
+.mat-toolbar-row {
+  background-color: #BFD1E0;
+  position: relative; /* Permite que los elementos hijos se posicionen absolutamente respecto a este contenedor */
+}
+
+/* Estilo para el contenedor del menú desplegable */
+.dropdown {
+  position: relative; /* Permite que el contenido del menú se posicione absolutamente dentro de este contenedor */
+  display: inline-block; /* Permite que el contenedor se ajuste al tamaño de su contenido */
+}
+
+/* Estilo para el botón del menú desplegable */
+.dropbtn {
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima del botón */
+}
+
+/* Estilo para el contenido del menú desplegable */
+.dropdown-content {
+  display: none; /* Ocultar el contenido del menú por defecto */
+  position: absolute; /* Posiciona el menú desplegable de forma absoluta respecto al contenedor .dropdown */
+  background-color: white; /* Color de fondo claro para el menú */
+  min-width: 160px; /* Establece un ancho mínimo para el menú */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad al menú */
+  z-index: 1; /* Asegura que el contenido del menú esté por encima de otros elementos */
+  flex-direction: column; /* Alinea los botones del menú verticalmente */
+}
+
+/* Muestra el contenido del menú al pasar el mouse sobre el contenedor del menú */
+.dropdown:hover .dropdown-content {
+  display: flex; /* Muestra el contenido como un contenedor flex */
+}
+
+/* Estilo para los botones dentro del menú desplegable */
+.dropdown-content button {
+  width: 100%; /* Los botones ocupan todo el ancho del menú */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border: none; /* Sin borde para un aspecto limpio */
+  background: black; /* Sin fondo para evitar colores extraños */
+  padding: 12px 16px; /* Espaciado interno para los botones */
+}
+
+/* Cambia el color de fondo de los botones al pasar el mouse */
+.dropdown-content button:hover {
+  background-color: #ddd; /* Color de fondo al pasar el mouse para indicar que es interactivo */
+}
+
+
+.main-content {
+  flex: 1; /* Para que el contenido principal ocupe el espacio restante */
+}
+
+.footer {
+  background-color: #f8f8f8; /* Color de fondo del footer */
+  padding: 20px; /* Espaciado interno */
+  position: relative; /* Posicionamiento relativo para el footer */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+}
+
+.footer-container {
+  display: flex; /* Usar flexbox para alinear contenido */
+  flex-direction: column; /* Cambiar a columna para centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+.redes.sociales {
+  display: flex; /* Usar flexbox para los enlaces de redes sociales */
+  gap: 10px; /* Espacio entre los enlaces */
+  margin-bottom: 10px; /* Espacio entre los iconos y la información de contacto */
+}
+
+.footer-contact {
+  text-align: center; /* Alinear el texto al centro */
+}
+
+/* Estilo adicional para el icono de las redes sociales */
+.fab {
+  font-size: 24px; /* Tamaño de los iconos */
+  color: #333; /* Color de los iconos */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+.fab:hover {
+  color: #007bff; /* Color al pasar el mouse */
+}

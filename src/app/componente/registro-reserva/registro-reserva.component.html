@@ -1,94 +1,57 @@
 
 <app-navbar></app-navbar>
-<body>
-<section class="container">
-  <header>Registrar reserva</header>
-  <form class="form" action="#">
-    <div class="input-box">
-      <label>Full Name</label>
-      <input required="" placeholder="Enter full name" type="text">
-    </div>
-    <div class="column">
-      <div class="input-box">
-        <label>Phone Number</label>
-        <input required="" placeholder="Enter phone number" type="telephone">
-      </div>
-      <div class="input-box">
-        <label>Birth Date</label>
-        <input required="" placeholder="Enter birth date" type="date">
-      </div>
-    </div>
-    <div class="gender-box">
-      <label>Gender</label>
-      <div class="gender-option">
-        <div class="gender">
-          <input checked="" name="gender" id="check-male" type="radio">
-          <label for="check-male">Male</label>
-        </div>
-        <div class="gender">
-          <input name="gender" id="check-female" type="radio">
-          <label for="check-female">Female</label>
-        </div>
-        <div class="gender">
-          <input name="gender" id="check-other" type="radio">
-          <label for="check-other">Prefer not to say</label>
-        </div>
-      </div>
-    </div>
-    <div class="input-box address">
-      <label>Address</label>
-      <input required="" placeholder="Enter street address" type="text">
-      <div class="column">
-        <div class="select-box">
-          <select>
-            <option hidden="">Country</option>
-            <option>USA</option>
-            <option>UK</option>
-            <option>Germany</option>
-            <option>Japan</option>
-          </select>
-        </div>
-        <input required="" placeholder="Enter your city" type="text">
-      </div>
-    </div>
+<mat-card class="example-card">
+  <mat-card-title>Registrar reserva</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="reservaForm" class="form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Detalle reserva</mat-label>
+        <input matInput formControlName="detalleReserva" placeholder="Ingrese detalle de reserva" />
+      </mat-form-field>
 
-    <!-- New fields added -->
-    <div class="input-box">
-      <label>Reservation ID</label>
-      <input required="" placeholder="Enter reservation ID" type="number">
-    </div>
-    <div class="input-box">
-      <label>Reservation Details</label>
-      <input required="" placeholder="Enter reservation details" type="text">
-    </div>
-    <div class="input-box">
-      <label>Reservation Date</label>
-      <input required="" placeholder="Enter reservation date" type="date">
-    </div>
-    <div class="input-box">
-      <label>Number of People</label>
-      <input required="" placeholder="Enter number of people" type="number">
-    </div>
-    <div class="input-box">
-      <label>User ID</label>
-      <input required="" placeholder="Enter user ID" type="number">
-    </div>
-    <div class="input-box">
-      <label>Admin ID</label>
-      <input required="" placeholder="Enter admin ID" type="number">
-    </div>
-    <div class="input-box">
-      <label>Package ID</label>
-      <select required="">
-        <option hidden="">Select Package</option>
-        <option value="1">Package 1</option>
-        <option value="2">Package 2</option>
-        <option value="3">Package 3</option>
-        <option value="4">Package 4</option>
-      </select>
-    </div>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Reserva</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fechaReserva"
+               placeholder="Seleccione la fecha de reserva" />
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
 
-    <button>Submit</button>
-  </form>
-</section>
-</body>
+      <mat-form-field appearance="fill">
+        <mat-label>Cantidad personas</mat-label>
+        <input matInput formControlName="cantidadPersonas" placeholder="Ingrese la cantidad de personas" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>TipoUser</mat-label>
+        <mat-select formControlName="tipoProducto" [(value)]="idUsuario" required>
+          <mat-option *ngFor="let a of lista" [value]="a.id">
+            {{a.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>TipoAdmin</mat-label>
+        <mat-select formControlName="tipoProducto" [(value)]="idAdministrador" required>
+          <mat-option *ngFor="let a of lista" [value]="a.id">
+            {{a.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>TipoPaquete</mat-label>
+        <mat-select formControlName="tipoProducto" [(value)]="idPaquete" required>
+          <mat-option *ngFor="let a of lista" [value]="a.id">
+            {{a.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

@@ -38,3 +38,15 @@ button[type="submit"] {
   width: 100%;
   margin-top: 16px;
 }
+
+.register {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #313131;
+  text-decoration: none;
+}
+
+.register:hover {
+  color: #6D96A6;
+}

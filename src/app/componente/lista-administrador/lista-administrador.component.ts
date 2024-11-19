@@ -19,27 +19,29 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogoComponent} from '../lista-usuario/confirm-dialogo/confirm-dialogo.component';
 import {Administrador} from '../../model/administrador';
 import {AdministradorService} from '../../services/administrador.service';
+import {NavbarComponent} from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-lista-administrador',
   standalone: true,
-  imports: [
-    MatButton,
-    MatCell,
-    MatCellDef,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderRow,
-    MatHeaderRowDef,
-    MatPaginator,
-    MatRow,
-    MatRowDef,
-    MatSort,
-    MatSortHeader,
-    MatTable,
-    MatHeaderCellDef,
-    RouterLink
-  ],
+    imports: [
+        MatButton,
+        MatCell,
+        MatCellDef,
+        MatColumnDef,
+        MatHeaderCell,
+        MatHeaderRow,
+        MatHeaderRowDef,
+        MatPaginator,
+        MatRow,
+        MatRowDef,
+        MatSort,
+        MatSortHeader,
+        MatTable,
+        MatHeaderCellDef,
+        RouterLink,
+        NavbarComponent
+    ],
   templateUrl: './lista-administrador.component.html',
   styleUrl: './lista-administrador.component.css'
 })

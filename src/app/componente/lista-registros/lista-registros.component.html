@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<!-- Asegúrate de incluir Font Awesome en tu proyecto -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<div class="city-item-container">
+  <!-- Lista de elementos -->
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-building"></i> <!-- Ícono de edificio -->
+    <h4>Departamentos</h4>
+    <button (click)="navigateToFormDep()">Ver Lista Departamento</button>
+  </div>
+
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-user"></i> <!-- Ícono de usuario -->
+    <h4>Usuarios</h4>
+    <button (click)="navigateToFormUser()">Ver Lista Usuario</button>
+  </div>
+
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-map-marker-alt"></i> <!-- Ícono de marcador de ubicación -->
+    <h4>Flora</h4>
+    <button (click)="navigateToFormFlora()">Ver Lista Flora</button>
+  </div>
+
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-suitcase"></i> <!-- Ícono de maleta -->
+    <h4>Atractivos</h4>
+    <button (click)="navigateToFormAtractivo()">Ver Lista Atractivos</button>
+  </div>
+
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-leaf"></i> <!-- Ícono de hoja -->
+    <h4>Administrador</h4>
+    <button (click)="navigateToFormAdmin()">Ver Lista Administrador</button>
+  </div>
+
+  <div class="city-item">
+    <p>{{ cityName }}</p>
+    <i class="fa-solid fa-paw"></i> <!-- Ícono de huella -->
+    <h4>Fauna</h4>
+    <button (click)="navigateToFormFauna()">Ver Lista Fauna</button>
+  </div>
+</div>
+
