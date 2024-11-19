@@ -18,11 +18,16 @@ export class ListaRegistrosComponent {
   cityName: ListaDepartamentoComponent;
 
   constructor(private router: Router) {}
+<<<<<<< HEAD
   navigateToFormDep() {
+=======
+  navigateToForm() {
+>>>>>>> 9b3df2db7971bcfa9dc539d755c225afd30aaa2b
     this.router.navigate(['/lista-departamento']);
   }
 
 
+<<<<<<< HEAD
   navigateToFormUser() {
     this.router.navigate(['/lista-usuarios']);
   }
@@ -40,6 +45,25 @@ export class ListaRegistrosComponent {
   }
 
   navigateToFormFauna() {
+=======
+  navigateToForm1() {
+    this.router.navigate(['/lista-usuarios']);
+  }
+
+  navigateToForm2() {
+    this.router.navigate(['/lista-flora']);
+  }
+
+  navigateToForm3() {
+    this.router.navigate(['/lista-atractivo-turistico']);
+  }
+
+  navigateToForm4() {
+    this.router.navigate(['/lista-administrador']);
+  }
+
+  navigateToForm5() {
+>>>>>>> 9b3df2db7971bcfa9dc539d755c225afd30aaa2b
     this.router.navigate(['/lista-fauna']);
   }
 }

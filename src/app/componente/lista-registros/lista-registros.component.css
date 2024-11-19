@@ -5,13 +5,21 @@
   align-items: center;
   gap: 20px; /* Espaciado entre elementos */
   padding:20px;
+<<<<<<< HEAD
   background-color:#f0e4d6; /* Fondo neutro para mejor contraste */
+=======
+  background-color:#edbfce; /* Fondo neutro para mejor contraste */
+>>>>>>> 9b3df2db7971bcfa9dc539d755c225afd30aaa2b
 }
 .city-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   background-color: #fdf6ed; /* Fondo claro para contraste */
+=======
+  background-color: #f9f9f9; /* Fondo claro para contraste */
+>>>>>>> 9b3df2db7971bcfa9dc539d755c225afd30aaa2b
   padding: 16px;
   border: 1px solid #ddd; /* Bordes suaves */
   border-radius: 8px;
@@ -51,7 +59,11 @@
 
 .city-item button {
   background-color: #4CAF50;
+<<<<<<< HEAD
   color: #ffffff;
+=======
+  color: white;
+>>>>>>> 9b3df2db7971bcfa9dc539d755c225afd30aaa2b
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
